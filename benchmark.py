@@ -1,9 +1,9 @@
 import torch
 
-B = 0
-M = 0
-N = 0
-K = 0
+B = 2048
+M = 12
+N = 80
+K = 21
 dtype = torch.float16
 device = torch.device("cuda")
 
