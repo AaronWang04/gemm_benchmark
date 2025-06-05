@@ -21,6 +21,9 @@ temp_for_B = torch.randn(N,K, dtype=dtype, device=device)
 single_slice_B_data = temp_for_B.transpose(0,1) 
 B_mat = torch.as_strided( single_slice_B_data, size=(B, K, N), stride=(0, 1, K))
 
+print(A_mat.stride())
+print(B_mat.stride())
+
 for _ in range(warmup_iterations):
     test = aten(A_mat, B_mat)
 
